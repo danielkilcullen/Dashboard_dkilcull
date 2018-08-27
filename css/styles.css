@@ -1,0 +1,19 @@
+.heading {
+    margin-bottom: 25px;
+}
+
+.placeholder {
+    background-color: #d6d6d6;
+    border: solid black 2px;
+  }
+
+.table-sm {
+    width: 100%;
+    margin-top: 25px;
+    padding-right: 20px;
+    border-right: 1px solid black;
+}
+
+.checkbox {
+    align: center;
+}
