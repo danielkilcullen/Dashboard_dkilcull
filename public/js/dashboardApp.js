@@ -2,7 +2,7 @@ var dashboardApp = new Vue({
   el: '#dashboard',
   data: {
     project: {
-      name : 'pop',
+      name : '',
       short_description: '',
       start_date : '',
       target_date : '',
@@ -61,7 +61,15 @@ var dashboardApp = new Vue({
       fetch('https://raw.githubusercontent.com/tag/iu-msis/dev/public/project1.json')
       .then( response => response.json() )
       .then( json => {
-        dashboardApp.project = json;
+        // dashboardApp.project = json;
+        dashboardApp.project.name = json.name
+        dashboardApp.project.short_description = json.short_description
+        dashboardApp.project.start_date = json.start_date
+        dashboardApp.target_date = json.target_date
+        dashboardApp.budget = json.budget
+        dashboardApp.spent = json.spent
+        dashboardApp.projected_spend = json.projected_spend
+        dashboardApp.weekly_effort_target = json.weekly_effort_target
         console.log('FETCH returned: ');
         console.log(json);
       })
@@ -86,8 +94,8 @@ var dashboardApp = new Vue({
     }
   },
   created() {
-    this.fetchTasks();
     this.fetchProject();
+    this.fetchTasks();
     //
     // console.log(window.location.href);
     //
