@@ -1,13 +1,22 @@
-.heading {
-    margin-bottom: 25px;
+.placeholder {
+  background-color: rgb(200,200,255);
+  border: 2px solid rgb(50, 50, 100);
 }
 
-.placeholder {
-    background-color: #d6d6d6;
-    border: solid black 2px;
-  }
+section {
+  border: 1px dotted rgb(35, 95, 163);
+  text-align:center;
+}
 
-div .ban {
+section h2 {
+  font-size: 10pt;
+  text-transform: uppercase;
+  color: #999;
+  margin-top: 1em;
+  margin-bottom: 0;;
+}
+
+section .ban {
   font-size: 20pt;
   color: rgb(35, 95, 163);
   font-weight: bold;
@@ -16,11 +25,17 @@ div .ban {
 
 #taskTable > tbody > tr {
   border-left: 12px solid #eee;
+  cursor: pointer;
 }
+
+#taskTable.table-hover> tbody > tr:hover  {
+  /* background-color: rgb(35, 95, 163); */
+}
+
 #taskTable > tbody > tr.current-sprint {
   border-left: 12px solid rgb(35, 95, 163);
 }
-
+/** tablesort **/
 th[role=columnheader]:not(.no-sort) {
 	cursor: pointer;
 }
@@ -53,19 +68,4 @@ th[aria-sort]:not(.no-sort):after {
 th[role=columnheader]:not(.no-sort):hover:after {
 	visibility: visible;
 	opacity: 1;
-}
-
-#budget, #target {
-  background-color: white;
-  border: solid black 2px;
-}
-
-/* .table-sm {
-    width: 100%;
-    padding-right: 20px;
-    border-right: 1px black;
-} */
-
-th, td {
-    text-align: center;
 }
