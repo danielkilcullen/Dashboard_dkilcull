@@ -56,7 +56,7 @@ var dashboardApp = new Vue({
       }
     },
     fetchTasks () {
-      fetch('https://github.com/tag/iu-msis/blob/master/app/data/p1-tasks.json')
+      fetch()
       .then( response => response.json() )
       // ^ This is the same as .then( function(response) {return response.json()} )
       .then( json => {dashboardApp.tasks = json} )
@@ -66,7 +66,7 @@ var dashboardApp = new Vue({
       })
     },
     fetchProject () {
-      fetch('https://github.com/tag/iu-msis/blob/master/app/data/project1.json')
+      fetch()
       .then( response => response.json() )
       .then( json => {dashboardApp.project = json} )
       .catch( err => {

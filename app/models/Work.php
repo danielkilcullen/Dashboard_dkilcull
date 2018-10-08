@@ -8,6 +8,7 @@ class Work
   public $stop;   //'YYYY-MM-DD', needs to be calculated
   public $hours;
   public $completion_estimate;
+
   public function __construct($row) {
     $this->id = intval($row['id']);
     $this->task_id = intval($row['task_id']);
@@ -23,6 +24,7 @@ class Work
     $this->stop = $date->format('Y-m-d H:i:s');
     $this->completion_estimate = intval($row['completion_estimate']);
   }
+
   public static function getWorkByTaskId(int $taskId) {
     // 1. Connect to the database
     $db = new PDO(DB_SERVER, DB_USER, DB_PW);

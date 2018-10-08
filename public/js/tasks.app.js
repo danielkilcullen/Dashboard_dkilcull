@@ -56,7 +56,7 @@ methods: {
   },
   datetimeFormat(d) {
     d = d || moment();
-    return moment(d).format('YYYY-MM-DD[T]HH:MM');
+    return moment(d).format('YYYY-MM-DD[T]HH:mm');
   },
   getEmptyWorkForm() {
     return {

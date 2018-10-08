@@ -10,7 +10,7 @@ if ($taskId < 1) {
 }
 
 //1. fetch all the work for that task id
-$workArr = Work::findByTaskId($taskId);
+$workArr = Work::getWorkByTaskId($taskId);
 
 //2. convert to json and print
 $json = json_encode($workArr, JSON_PRETTY_PRINT);
